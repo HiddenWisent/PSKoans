@@ -245,7 +245,7 @@ All things that are not 'evaluated' are "recognised" as characters.
                 'Hello'
                 'world'
             )
-            '____ ____' | Should -Be "$array"
+            'Hello world' | Should -Be "$array"
         }
 
         It 'can be joined with a different string by setting the OFS variable' {
@@ -263,7 +263,7 @@ All things that are not 'evaluated' are "recognised" as characters.
                 'Hello'
                 'world'
             )
-            '____' | Should -Be "$array"
+            'Hello... world' | Should -Be "$array"
 
             # Removing the created OFS variable, the default will be restored.
             Remove-Variable -Name OFS -Force
